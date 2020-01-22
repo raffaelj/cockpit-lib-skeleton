@@ -41,9 +41,9 @@ $cockpit->on('app.layout.header', function() {
     echo '<script>
         App.base_url = (App.base_url + "/lib/cockpit/").replace(/\/$/, "");
         App.env_url = "'. $this->pathToUrl(COCKPIT_ENV_ROOT) .'";
-        // App.base = function(url) {
-            // return url.indexOf("/addons") === 0 || url.indexOf("/config") === 0 ? this.env_url+url : this.base_url+url;
-        // };
+        App.base = function(url) {
+            return url.indexOf("/addons") === 0 || url.indexOf("/config") === 0 ? this.env_url+url : this.base_url+url;
+        };
         App.route = function(url) {
             if (url.indexOf("/assets") === 0 && url.indexOf("/assetsmanager") !== 0) {
                 return this.base_route+"/lib/cockpit"+url;
