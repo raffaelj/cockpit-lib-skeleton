@@ -36,7 +36,7 @@ if (!defined('COCKPIT_BASE_ROUTE')) define('COCKPIT_BASE_ROUTE' , strlen($COCKPI
 // bootstrap cockpit
 require(__DIR__.'/lib/cockpit/bootstrap.php');
 
-// fix broken assets paths for via App.base() and App.route()
+// fix broken assets paths for App.base() and App.route()
 $cockpit->on('app.layout.header', function() {
     echo '<script>
         App.base_url = (App.base_url + "/lib/cockpit/").replace(/\/$/, "");
