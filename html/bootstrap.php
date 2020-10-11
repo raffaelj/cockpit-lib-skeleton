@@ -29,7 +29,7 @@ $COCKPIT_BASE_URL    = strlen($COCKPIT_BASE) ? "/{$COCKPIT_BASE}": $COCKPIT_BASE
 
 if (!defined('COCKPIT_DOCS_ROOT'))  define('COCKPIT_DOCS_ROOT'  , $COCKPIT_DOCS_ROOT);
 if (!defined('COCKPIT_BASE_URL'))   define('COCKPIT_BASE_URL'   , $COCKPIT_BASE_URL);
-if (!defined('COCKPIT_BASE_ROUTE')) define('COCKPIT_BASE_ROUTE' , strlen($COCKPIT_BASE) ? "/{$COCKPIT_BASE}": $COCKPIT_BASE);
+if (!defined('COCKPIT_BASE_ROUTE')) define('COCKPIT_BASE_ROUTE' , $COCKPIT_BASE_URL);
 // end of copy/paste
 
 
